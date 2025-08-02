@@ -72,7 +72,7 @@ deactivate
 
 ## VI. Demo (Screenshot)
 
-*(Add your image here if you have one)*
+![Testcase](static/assets/demo.png)
 
 ## VII. Project Structure
 
