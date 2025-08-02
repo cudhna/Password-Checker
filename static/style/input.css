@@ -1,0 +1,93 @@
+.pw-input-wrapper {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.pw-input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.1rem;
+  color: #23243a;
+  background: #f4f6fa;
+  border: 2px solid #e3e7ef;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(60, 60, 120, 0.04);
+  outline: none;
+  transition: border 0.22s, box-shadow 0.22s;
+  letter-spacing: 0.06em;
+}
+.pw-input:focus {
+  border-color: #7f93ff;
+  box-shadow: 0 0 0 2px #c3d7ff;
+  background: #fff;
+}
+.pw-eye-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  opacity: 0.72;
+  transition: opacity 0.18s;
+}
+.pw-eye-icon:hover,
+.pw-eye-icon:focus {
+  opacity: 1;
+}
+.pw-strength-group {
+  width: 320px;
+  margin: 8px 0 18px 0;
+  display: flex;
+  align-items: center;
+}
+
+.pw-strength-bar {
+  width: 100%;
+  max-width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #eee;
+  transition: background 0.3s, width 0.3s;
+}
+
+.pw-strength-bar.level-1 {
+  background: #ff4d4f;
+  width: 25%;
+}
+.pw-strength-bar.level-2 {
+  background: #ffec3d;
+  width: 50%;
+}
+.pw-strength-bar.level-3 {
+  background: #40a9ff;
+  width: 75%;
+}
+.pw-strength-bar.level-4 {
+  background: #52c41a;
+  width: 100%;
+  visibility: visible; /* Hiển thị thanh trạng thái khi có mật khẩu */
+}
+.pw-strength-text {
+  font-size: 1.08rem;
+  font-family: "Montserrat", "Inter", Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+/* Màu chữ theo mức độ giống màu bar */
+.pw-strength-text.level-1 {
+  color: #ff4d4f;
+}
+.pw-strength-text.level-2 {
+  color: #ffec3d;
+}
+.pw-strength-text.level-3 {
+  color: #40a9ff;
+}
+.pw-strength-text.level-4 {
+  color: #52c41a;
+}

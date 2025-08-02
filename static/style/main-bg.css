@@ -1,0 +1,61 @@
+.main-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    118deg,
+    #e0c3fc 0%,
+    #8ec5fc 40%,
+    #a1c4fd 70%,
+    #fbc2eb 100%
+  );
+  background-size: 400% 400%;
+  animation: moveGradient 16s ease-in-out infinite;
+  position: relative;
+}
+
+html,
+body {
+  font-family: "Inter", "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+.pw-title {
+  font-family: "Montserrat", "Inter", Helvetica, sans-serif;
+}
+
+.pw-container {
+  backdrop-filter: blur(18px) saturate(160%);
+  background: rgba(255, 255, 255, 0.28);
+  border: 1.2px solid rgba(180, 160, 255, 0.09);
+  overflow: hidden;
+}
+.pw-privacy-note {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.98rem;
+  color: #292b50;
+  background: rgba(255, 255, 255, 0);
+  z-index: 10;
+  padding: 0.7rem 0 0.9rem 0;
+  box-shadow: 0 -2px 12px rgba(60,60,120,0.07);
+}
+
+@keyframes moveGradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

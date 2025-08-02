@@ -1,0 +1,88 @@
+/* ===== Responsive layout: card always perfectly centered, privacy-note always at bottom ===== */
+
+/* Layout base: always center everything vertically and horizontally */
+html, body, .main-bg {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card always floats in the center, never touches screen edges */
+.pw-container {
+  width: 100%;
+  max-width: 410px;
+  min-width: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 22px 5vw;
+  border-radius: 20px;
+}
+
+/* Adjust card for mobile/tablet for more space */
+@media (max-width: 760px) {
+  .pw-container {
+    max-width: 97vw;
+    margin: 0 1.5vw;
+    padding: 14px 2vw 18px 2vw;
+    border-radius: 14px;
+  }
+}
+
+/* Extra small mobile - even more space on the sides */
+@media (max-width: 430px) {
+  .pw-container {
+    max-width: 98vw;
+    margin: 0 1vw;
+    padding: 10px 1vw 13px 1vw;
+    border-radius: 9px;
+  }
+}
+
+/* ---- Privacy note is always pinned at the true bottom of the viewport on all screens ---- */
+.pw-privacy-note {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  font-size: 0.98rem;
+  color: #292b50;
+  background: rgba(255,255,255,0.11);
+  z-index: 999;
+  padding: 0.7rem 0 0.96rem 0;
+  box-shadow: 0 -2px 12px rgba(60,60,120,0.08);
+  border-radius: 0 0 18px 18px;
+}
+
+/* Mobile tweak: smaller font, tighter radius for privacy at bottom */
+@media (max-width: 760px) {
+  .pw-privacy-note {
+    font-size: 13px;
+    border-radius: 0 0 12px 12px;
+  }
+}
+@media (max-width: 430px) {
+  .pw-privacy-note {
+    font-size: 11px;
+    border-radius: 0 0 7px 7px;
+  }
+}
+
+/* Make room so card never overlaps privacy note on smaller screens */
+@media (max-width: 760px) {
+  .main-bg {
+    padding-bottom: 54px; /* = height of .pw-privacy-note + safe spacing */
+  }
+}
+@media (max-width: 430px) {
+  .main-bg {
+    padding-bottom: 44px;
+  }
+}

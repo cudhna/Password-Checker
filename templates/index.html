@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Password Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style/main-bg.css" />
+    <link rel="stylesheet" href="/static/style/container.css" />
+    <link rel="stylesheet" href="/static/style/input.css" />
+    <link rel="stylesheet" href="/static/style/button.css" />
+    <link rel="stylesheet" href="/static/style/result.css" />
+    <link rel="stylesheet" href="/static/style/responsive.css" />
+  </head>
+  <body>
+    <main class="main-bg">
+      <section class="pw-container">
+        <h1 class="pw-title">Password Checker</h1>
+        <form id="pw-form" autocomplete="off">
+          <div class="pw-input-wrapper">
+            <input
+              type="text"
+              id="password"
+              class="pw-input"
+              placeholder="Enter your password..."
+              required
+              autofocus
+            />
+            <!-- Icon show/hide -->
+             <img  
+              id="pw-eye"
+              class="pw-eye-icon"
+              src="/static/assets/709612.png  "
+              alt="Show/hide password"
+              tabindex="0"
+              style="cursor: pointer;"
+              />
+          </div>  
+            <!-- Password strength status bar -->
+            <div class="pw-strength-group">
+              <div id="pw-strength-bar" class="pw-strength-bar"></div>
+            </div>
+          </div>
+        </form>
+        <div id="pw-result" class="pw-result">
+          <!-- Password level result -->
+        </div>
+      </section>
+           <!--  Security commitment -->
+      <div class="pw-privacy-note">
+         Your password is <u>not stored</u> or sent anywhere. It is only used to check how strong or weak it is, and to check if it was leaked using <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener">haveibeenpwned.com</a>.
+      </div>
+    </main>
+     <script src="/static/script.js"></script>
+  </body>
+</html>
