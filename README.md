@@ -83,10 +83,13 @@ password-checker/
 ├── utils/
 │   ├── strength_check.py
 │   └── validate.py
+|   └── suggestion_password.py
 ├── templates/
 │   └── index.html
 ├── static/
-│   └── style.css
+│   └── style
+|   └── assets
+|   └── script.js
 └── README.md
 ```
 
